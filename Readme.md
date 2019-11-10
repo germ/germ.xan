@@ -42,8 +42,11 @@ It's pretty simple, it mostly acts a proxy for remotes!
 ?loc=[URL]		// The resource to request
 
 #### url format
-[repo]/current/[path to file]   												// Get latest revision
-[repo]/history/[day]/[time+hash]/[path to file]				  // Get specfic revision
+// Get latest revision
+[repo]/current/[path to file]
+
+// Get specfic revision
+[repo]/history/[day]/[time+hash]/[path to file]
 
 - https://github.com/germ/germ.xan.git/current/index.md
 - https://github.com/germ/germ.xan.git/history/2019-11-10/06-35-34-9eec078fbe/index.md
@@ -51,9 +54,9 @@ It's pretty simple, it mostly acts a proxy for remotes!
 #### Response
 JSON Object describing the resource
 
-type DocReq struct {
-	Doc       string		// The Raw document (if text)
-	IsLatest  bool			// Does a newer version exist?
-	LatestUrl string		// Where the newest version is (permalink)
-	Url       string		// Link to the document
-}
+    type DocReq struct {
+	    Doc       string		// The Raw document (if text)
+      IsLatest  bool			// Does a newer version exist?
+	    LatestUrl string		// Where the newest version is (permalink)
+	    Url       string		// Link to the document
+    }
