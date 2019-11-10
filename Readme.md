@@ -43,9 +43,12 @@ It's pretty simple, it mostly acts a proxy for remotes!
 
 #### url format
 // Get latest revision
+
 [repo]/current/[path to file]
 
+
 // Get specfic revision
+
 [repo]/history/[day]/[time+hash]/[path to file]
 
 - https://github.com/germ/germ.xan.git/current/index.md
@@ -57,6 +60,6 @@ JSON Object describing the resource
     type DocReq struct {
 	    Doc       string		// The Raw document (if text)
       IsLatest  bool			// Does a newer version exist?
-	    LatestUrl string		// Where the newest version is (permalink)
+      LatestUrl string		// Where the newest version is (permalink)
 	    Url       string		// Link to the document
     }
